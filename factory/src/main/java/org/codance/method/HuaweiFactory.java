@@ -1,4 +1,4 @@
-package org.codance.java.method;
+package org.codance.method;
 
 /**
  * @author zhaoxg

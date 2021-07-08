@@ -1,4 +1,4 @@
-package org.codance.java.example;
+package org.codance.example;
 
 import java.math.BigDecimal;
 import java.util.Map;
