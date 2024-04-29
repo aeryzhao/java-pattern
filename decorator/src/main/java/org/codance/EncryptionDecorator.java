@@ -1,7 +1,5 @@
 package org.codance;
 
-import java.util.Arrays;
-
 /**
  * @author zhaoxg
  * @date 2024/4/24 09:23
@@ -27,9 +25,5 @@ public class EncryptionDecorator extends DataSourceDecorator {
 
     private String decrypt(String data) {
         return data + " decrypted";
-    }
-
-    public interface TestInterface {
-        void testMethod();
     }
 }
