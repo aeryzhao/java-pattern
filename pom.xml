@@ -17,6 +17,7 @@
         <module>adapt</module>
         <module>bridge</module>
         <module>component</module>
+        <module>decorator</module>
     </modules>
 
     <properties>
