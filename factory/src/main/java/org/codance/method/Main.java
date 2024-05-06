@@ -2,20 +2,20 @@ package org.codance.method;
 
 /**
  * @author zhaoxg
- * @date 2021/7/8 15:58
+ * @date 2024/5/6 17:29
  */
 public class Main {
+    private static Dialog dialog;
     public static void main(String[] args) {
-        Factory appleFactory = new AppleFactory();
-        Factory huaweiFactory = new HuaweiFactory();
+        configure();
+        dialog.renderWindow();
+    }
 
-        Phone apple = appleFactory.getPhone();
-        Phone huawei = huaweiFactory.getPhone();
-
-        System.out.println(apple);
-        System.out.println(huawei);
-
-        apple.produce();
-        huawei.produce();
+    static void configure() {
+        if (System.getProperty("os.name").equals("Mac OS X")) {
+           dialog =  new MacDialog();
+        } else {
+            dialog = new HtmlDialog();
+        }
     }
 }
