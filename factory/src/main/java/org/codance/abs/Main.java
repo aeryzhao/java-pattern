@@ -11,19 +11,16 @@ public class Main {
     private static Client client;
 
     public static void main(String[] args) {
-        client = configureClient();
+        configureClient();
         client.paint();
     }
 
-    private static Client configureClient() {
-        String os = System.getProperty("os.name").toLowerCase();
-        System.out.println(os);
-        if (os.contains("windows")) {
-            factory = new WinFactory();
-        } else {
+    private static void configureClient() {
+        if (System.getProperty("os.name").equals("Mac OS X")) {
             factory = new MacFactory();
+        } else {
+            factory = new WinFactory();
         }
         client = new Client(factory);
-        return client;
     }
 }
